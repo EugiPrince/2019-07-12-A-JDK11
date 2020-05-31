@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import it.polito.tdp.food.model.Food;
+import it.polito.tdp.food.model.FoodCalories;
 import it.polito.tdp.food.model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -71,7 +72,21 @@ public class FoodController {
     @FXML
     void doCalorie(ActionEvent event) {
     	txtResult.clear();
-    	txtResult.appendText("Analisi calorie...");
+    	
+    	Food f = this.boxFood.getValue();
+    	
+    	if(f == null) {
+    		this.txtResult.appendText("Seleziona un cibo");
+    		return;
+    	}
+    	
+    	List<FoodCalories> lista = this.model.elencoCibiConnessi(f);
+    	
+    	for(int i=0; i<5 && i<lista.size(); i++) {
+    		this.txtResult.appendText(String.format("%s %f\n", lista.get(i).getFood().getDisplay_name(), 
+    				lista.get(i).getCalories()));
+    	}
+    		
     }
 
     @FXML
