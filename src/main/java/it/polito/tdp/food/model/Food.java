@@ -53,6 +53,4 @@ public class Food {
 		return display_name;
 	}
 
-	
-	
 }

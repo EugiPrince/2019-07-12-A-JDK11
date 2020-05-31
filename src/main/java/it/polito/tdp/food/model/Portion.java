@@ -1,6 +1,7 @@
 package it.polito.tdp.food.model;
 
 public class Portion {
+	
 	private Integer portion_id;
 	private Double portion_amount;
 	private String portion_display_name;
@@ -22,36 +23,47 @@ public class Portion {
 	public Integer getPortion_id() {
 		return portion_id;
 	}
+	
 	public void setPortion_id(Integer portion_id) {
 		this.portion_id = portion_id;
 	}
+	
 	public Double getPortion_amount() {
 		return portion_amount;
 	}
+	
 	public void setPortion_amount(Double portion_amount) {
 		this.portion_amount = portion_amount;
 	}
+	
 	public String getPortion_display_name() {
 		return portion_display_name;
 	}
+	
 	public void setPortion_display_name(String portion_display_name) {
 		this.portion_display_name = portion_display_name;
 	}
+	
 	public Double getCalories() {
 		return calories;
 	}
+	
 	public void setCalories(Double calories) {
 		this.calories = calories;
 	}
+	
 	public Double getSaturated_fats() {
 		return saturated_fats;
 	}
+	
 	public void setSaturated_fats(Double saturated_fats) {
 		this.saturated_fats = saturated_fats;
 	}
+	
 	public Integer getFood_code() {
 		return food_code;
 	}
+	
 	public void setFood_code(Integer food_code) {
 		this.food_code = food_code;
 	}
@@ -86,7 +98,5 @@ public class Portion {
 		return "{portion_id=" + portion_id + ", portion_amount=" + portion_amount + ", portion_display_name="
 				+ portion_display_name + ", food_code=" + food_code + "}";
 	}
-
-	
 	
 }
