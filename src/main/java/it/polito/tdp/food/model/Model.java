@@ -58,4 +58,16 @@ public class Model {
 		return res;
 	}
 	
+	public String simula(Food partenza, int K) {
+		Simulator sim = new Simulator(this.grafo, this);
+		
+		sim.setK(K);
+		sim.init(partenza);
+		
+		sim.run();
+		
+		String messaggio = String.format("Preparati %d cibi in %f minuti\n", sim.getCibiPreparati(), sim.getTempoPreparazione());
+		return messaggio;
+	}
+	
 }
